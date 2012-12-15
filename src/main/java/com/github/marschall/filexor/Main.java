@@ -26,7 +26,7 @@ public class Main {
     xor(path);
   }
   
-  private static void xor(Path path) throws IOException {
+  static void xor(Path path) throws IOException {
     String fileName = path.getFileName().toString();
     
     Path target;
@@ -43,7 +43,7 @@ public class Main {
     }
   }
   
-  private static void xor(InputStream input, OutputStream output) throws IOException {
+  static void xor(InputStream input, OutputStream output) throws IOException {
     byte[] buffer = new byte[BUFFER_SIZE];
     int read;
     while ((read = input.read(buffer)) != -1) {
@@ -52,7 +52,7 @@ public class Main {
     }
   }
   
-  private static void xor(byte[] buffer, int len) {
+  static void xor(byte[] buffer, int len) {
     for (int i = 0; i < len; ++i) {
       byte value = buffer[i];
       buffer[i] = (byte) (value ^  0);
